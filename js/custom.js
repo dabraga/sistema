@@ -233,9 +233,10 @@ function addTableRow(){
 function RemoveTableRow(obj){
 	var i = obj.parentNode.parentNode.rowIndex;
 	var end_id = obj.getAttribute("end-id","001")
-	var id = document.querySelector('[name="id"]').value
+	
     document.getElementById("tbl_endereco").deleteRow(i);
 	if (end_id != ""){
+		var id = document.querySelector('[name="id"]').value
 		window.location.href = "editar.php?id="+id+"&endid="+end_id
 
 	}
