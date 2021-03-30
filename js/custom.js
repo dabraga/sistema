@@ -150,6 +150,11 @@ function validaCadastro(evt){
 		caixa_status.style.display = 'none';
 	}
 
+	if (!validGrid()){
+		alert("Informe pelo menos 1 endereço")
+		contErro += 1;
+	}
+
 	if(contErro > 0){
 		evt.preventDefault();
 	}
@@ -218,9 +223,9 @@ function addTableRow(){
 	 cols += '<td>&nbsp; <input type="hidden" name="end_id___'+index+'" id= "end_id___'+index+'" value=""></td>';		    
 	 cols += '<td><input type="text" class="form-control" id="endereco___'+index+'" name="endereco___'+index+'"> </td>';		    
 	 cols += '<td><input type="text" class="form-control" id="bairro___'+index+'" name="bairro___'+index+'"> </td>';		    
-	 cols += '<td><input type="text" class="form-control" id="cep___'+index+'" name="cep___'+index+'"> </td>';		    
-	 cols += '<td><input type="text" class="form-control" id="cidade___'+index+'" name="cidade___'+index+'"> </td>';	
-	 cols += '<td><input type="text" class="form-control" id="estado___'+index+'" name="estado___'+index+'"> </td>';		    
+	 cols += '<td><input type="text" class="form-control" maxlength="10" id="cep___'+index+'" name="cep___'+index+'"> </td>';		    
+	 cols += '<td><input type="text" class="form-control" maxlength="20" id="cidade___'+index+'" name="cidade___'+index+'"> </td>';	
+	 cols += '<td><input type="text" class="form-control" maxlength="2" id="estado___'+index+'" name="estado___'+index+'"> </td>';		    
 	 cols += '<td>';		    
 	 cols += '<button onclick="RemoveTableRow(this)" type="button" end-id= "" class="btn btn-danger">Remover</button>';		    
 	 cols += '</td>';
@@ -243,3 +248,11 @@ function RemoveTableRow(obj){
 
 }
 
+function validGrid(){
+
+	if (document.querySelectorAll('tr').length ==1){
+	   return false
+	}
+   return true;
+   
+   }

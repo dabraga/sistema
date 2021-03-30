@@ -140,10 +140,10 @@ endif;
 									</td>		    
 									<td><input type="text" class="form-control" id="endereco___<?=$row?>" name="endereco___<?=$row?>" value="<?=$endereco->endereco?>"> </td>
 									<td><input type="text" class="form-control" id="bairro___<?=$row?>" name="bairro___<?=$row?>"    value="<?=$endereco->bairro?>"> </td>	    
-									<td><input type="text" class="form-control" id="cep___<?=$row?>" name="cep___<?=$row?>"          value="<?=$endereco->cep?>">  </td>	    
-									<td><input type="text" class="form-control" id="cidade___<?=$row?>" name="cidade___<?=$row?>"    value="<?=$endereco->cidade?>"> </td>
+									<td><input type="text" class="form-control" maxlength="10" id="cep___<?=$row?>" name="cep___<?=$row?>"          value="<?=$endereco->cep?>">  </td>	    
+									<td><input type="text" class="form-control" maxlength="20" id="cidade___<?=$row?>" name="cidade___<?=$row?>"    value="<?=$endereco->cidade?>"> </td>
 									<td>
-										<input type="text" class="form-control" id="estado___<?=$row?>" name="estado___<?=$row?>"   value="<?=$endereco->estado?>"> 
+										<input type="text" class="form-control" maxlength="2" id="estado___<?=$row?>" name="estado___<?=$row?>"   value="<?=$endereco->estado?>"> 
 										
 									 </td>		    
 									<td>
